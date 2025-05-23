@@ -1,5 +1,6 @@
 const {readFile,writeFile} = require('fs')
 // a synchronous method requires a callback
+console.log('start')
 readFile('./content/first.txt','utf8',(err,result)=>{
     if (err){
         console.log(err)
@@ -18,7 +19,7 @@ readFile('./content/first.txt','utf8',(err,result)=>{
                 console.log(err)
                 return
             }
-            console.log(result)
+            console.log('done with this task')
         }
 
 )
@@ -26,3 +27,5 @@ readFile('./content/first.txt','utf8',(err,result)=>{
 // in node the first argument of readfile is always the error and the second one is always the result 
 
 }) 
+console.log('starting the next one')
+ // code running asynchronously 
