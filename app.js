@@ -6,4 +6,4 @@
 // npm install -g<oackagename>
 // sudo npm install -g<packagename>(mac)
 
-//basically no idea what I am doing 
+

@@ -1,0 +1,19 @@
+//trying not to be stuck in a tutoriall hell I am trying to revise 
+// const http =require(http)
+// const server = http.createServer((req,res)=>{
+
+// })
+// server.listen(5000)
+//  req (request) and res (response) is key to working with servers in Node.js. Here's a breakdown of what each one is and how they work:
+// The req object represents the incoming request from the client (usually a browser, app, or API client like Postman).
+
+// It contains details about what the client is asking for.
+// the res object is what you send back to the client. You use it to build the response.
+// server.listen(5000);This tells the server to start listening for incoming requests on port 5000.
+// A method is a function inside an object:
+// In res.write .write is a method 
+res	The response you (the server) send to the client
+res.writeHead()	Set status code & headers
+res.end(data)	Send back the body and close the connection
+
+
