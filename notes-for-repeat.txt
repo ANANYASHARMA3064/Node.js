@@ -15,5 +15,6 @@
 res	The response you (the server) send to the client
 res.writeHead()	Set status code & headers
 res.end(data)	Send back the body and close the connection
+packages, modules and dependencies are used interchangebly 
 
 
