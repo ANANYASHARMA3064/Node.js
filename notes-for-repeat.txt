@@ -16,5 +16,18 @@ res	The response you (the server) send to the client
 res.writeHead()	Set status code & headers
 res.end(data)	Send back the body and close the connection
 packages, modules and dependencies are used interchangebly 
+🛣️ The npx route: No global mess.
+Instead of cluttering your system with global installs, you can just run:
+
+bash
+Copy
+Edit
+npx nodemon index.js
+This does one of two things:
+
+If nodemon is installed locally in your project, it uses that.
+
+If not, it downloads it temporarily, runs it, then throws it away after.
+
 
 
