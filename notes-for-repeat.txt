@@ -28,6 +28,20 @@ This does one of two things:
 If nodemon is installed locally in your project, it uses that.
 
 If not, it downloads it temporarily, runs it, then throws it away after.
+package-lock.json: sometimes dependencies with version number also have dependencies of their own with their own version number and therefore we need to ensure that these version numbers dont change overtime so that the functionality remains the same
+JavaScript can’t do two things at once (it's single-threaded), so the event loop helps it fake multitasking by:
+
+🧠 Running all your code synchronously line-by-line
+
+📤 Sending async tasks (like timers, network requests) to the Web APIs (browser-side) or libuv (Node.js-side)
+
+📥 Putting the finished async callbacks in a queue (aka the callback/message/microtask queue)
+
+🌀 The event loop checks if the call stack is empty → if yes, it pushes the queued tasks back onto the stack
 
 
+🧱 What is a "sandboxed environment"?
+In programming, a sandbox is a safe, limited space where code can run without being able to mess with the system it's running on.
+
+Web APIs (in the browser context) are features provided by the browser, not by JavaScript itself. They handle tasks that JavaScript can't do alone because JS runs in a secure sandboxed environment.
 
