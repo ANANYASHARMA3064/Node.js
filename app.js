@@ -1,18 +1,15 @@
-const http =require('http')
-const server = http.createServer((req,res)=>{
-    if (req.url==='/'){
-        res.end('Home page')
+const {readFile} = require(  'fs')
+
+const getText =(path)=>{
+    return new Promise((resolve,reject)=>{
+        readFile('./content/first.txt','utf8',(err,data)=>{
+            if (err){
+                reject(err)
     }
-    else if(req.url==='/about'){
-        for (let i=0;i<1000;i++){
-            for (let j=0;j<1000;j++){
-            console.log(`${i},${j}`)
-        }
-        }
-        res.end('About page')
+            else{
+                resolve(data)
     }
-    res.end('Error page')
 })
-server.listen(8000,()=>{
-     console.log('Server listening on port : 8000....')
-})
+    })
+}
+r
