@@ -7,9 +7,12 @@ const getText =(path)=>{
                 reject(err)
     }
             else{
-                resolve(data)
+                resolve(data) 
     }
 })
     })
 }
-r
+getText('./content/first.txt')
+    .then((result)=>console.log(result))
+    .catch((err)=>console.log(err))
+#djdjcdkj
