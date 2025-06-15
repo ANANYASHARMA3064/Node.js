@@ -16,4 +16,4 @@ getText('./content/first.txt')
     .then((result)=>console.log(result))
     .catch((err)=>console.log(err))
 
-#30JANN
+#30JANNtgthrrthyh fgghhh
