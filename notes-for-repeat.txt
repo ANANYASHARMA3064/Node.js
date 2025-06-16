@@ -45,3 +45,13 @@ In programming, a sandbox is a safe, limited space where code can run without be
 
 Web APIs (in the browser context) are features provided by the browser, not by JavaScript itself. They handle tasks that JavaScript can't do alone because JS runs in a secure sandboxed environment.
 
+Behind the scenes:
+When you call resolve(), it marks the Promise as fulfilled and stores the value you passed in.
+
+When you call reject(), it marks the Promise as rejected and stores the error you passed in.
+
+Then:
+
+.then() runs with the resolve value
+
+.catch() runs with the reject error
