@@ -55,3 +55,4 @@ Then:
 .then() runs with the resolve value
 
 .catch() runs with the reject error
+still dk
