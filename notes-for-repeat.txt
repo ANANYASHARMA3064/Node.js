@@ -56,3 +56,24 @@ Then:
 
 .catch() runs with the reject error
 still dk
+Arrow functions DON’T have their own this.
+
+So if you're inside a class or object and using this, arrow functions act differently.
+
+Example:
+
+js
+Copy
+Edit
+const obj = {
+  name: "Ananya",
+  regularFunc: function () {
+    console.log("regular:", this.name); // ✅ "Ananya"
+  },
+  arrowFunc: () => {
+    console.log("arrow:", this.name); // ❌ undefined
+  }
+}
+
+obj.regularFunc();
+obj.arrowFunc();
