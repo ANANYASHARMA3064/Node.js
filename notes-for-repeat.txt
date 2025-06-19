@@ -77,3 +77,8 @@ const obj = {
 
 obj.regularFunc();
 obj.arrowFunc();
+✅ RULES TO REMEMBER:
+What the Promise does	.then() runs?	.catch() runs?
+resolve() called	✅ yes	❌ no
+reject() called	❌ no	✅ yes
+throw happens	❌ no	✅ yes

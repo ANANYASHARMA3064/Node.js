@@ -15,5 +15,16 @@ const getText =(path)=>{
 getText('./content/first.txt')
     .then((result)=>console.log(result))
     .catch((err)=>console.log(err))
+const start = async()=>{
+    try{
+            const first = await getText('./content/first.txt')
+            const second= await getText('./content/second.txt')
+            console.log(first,second)
 
-#30JANNtgthrrthyh fgghhh
+
+    }
+    catch(error){
+        console.log()
+    }
+    
+}
