@@ -74,7 +74,9 @@ const obj = {
     console.log("arrow:", this.name); // ❌ undefined
   }
 }
-
+----------------------------------------
+PROMISES
+--------------------------------------------
 obj.regularFunc();
 obj.arrowFunc();
 ✅ RULES TO REMEMBER:
@@ -82,3 +84,24 @@ What the Promise does	.then() runs?	.catch() runs?
 resolve() called	✅ yes	❌ no
 reject() called	❌ no	✅ yes
 throw happens	❌ no	✅ yes
+A callback is just a function that you pass in to another function so that it can be called later — at the right time.
+⚡ What’s a Callback again?
+A callback is a function you pass into another function so that the other function can call it later — maybe immediately, maybe after some delay, maybe after finishing some work.
+
+It’s about “here’s what to do when X finishes.”
+
+🔄 What’s Recursion?
+Recursion is when a function calls itself — usually to solve problems by breaking them down into smaller parts.
+
+It’s about a function repeating itself until some condition is met.
+A Promise is an object that represents the future result of an asynchronous operation.
+
+A promise has 3 states:
+
+State	What it means
+Pending	still working on it
+Resolved (fulfilled)	success! we got the data
+Rejected	failed. something went wrong
+A Promise is like saying:
+“I promise to give you something later — not now. You’ll either get the thing ✅ or an error ❌.
+await means: “Stop and wait here until the Promise finishes.”
