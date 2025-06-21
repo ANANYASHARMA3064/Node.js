@@ -24,6 +24,7 @@ readFile('./content/first.txt','utf8',(err,result)=>{
 
 )
 }) 
+
 // in node the first argument of readfile is always the error and the second one is always the result 
 
 }) 

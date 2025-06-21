@@ -105,3 +105,4 @@ Rejected	failed. something went wrong
 A Promise is like saying:
 “I promise to give you something later — not now. You’ll either get the thing ✅ or an error ❌.
 await means: “Stop and wait here until the Promise finishes.”
+-------------------------------------
