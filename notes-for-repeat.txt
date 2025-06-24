@@ -106,10 +106,11 @@ A Promise is like saying:
 “I promise to give you something later — not now. You’ll either get the thing ✅ or an error ❌.
 await means: “Stop and wait here until the Promise finishes.”
 ------------------------------------------------------------------------------
-Events                                                                        |
+Events  Emitter                                                                       |
 -------------------------------------------------------------------------------
 An Event Emitter is a design pattern used in programming (especially in Node.js and JavaScript) 
 to handle events in an asynchronous, decoupled way. It allows different parts of your application to listen for and respond to specific named events.
-
-ChatGPT said:
 Yes! onClick is actually a specific example of the event emitter pattern
+🧠 .on() — What It Does
+The .on() method is how you listen for a specific event.
+
