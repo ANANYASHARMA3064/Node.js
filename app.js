@@ -1,20 +1,15 @@
-const EventEmitter =require('events')
-const coustomEmitter =new EventEmitter()
-coustomEmitter.on('response',(name,id)=>{
-    console.log(`data recieved ${name} with ID:${id}`)
+const http = require('http')
 
+// const server = http.createServer((req, res) => {
+//   res.end('Welcome')
+// })
+
+// Using Event Emitter API
+const server = http.createServer()
+// emits request event
+// subcribe to it / listen for it / respond to it
+server.on('request', (req, res) => {
+  res.end('Welcome')
 })
-// You’re creating a custom object that:
 
-// Already comes with methods like .on() and .emit()
-
-// But yes — you can also add your own functions and properties to it like any other object
-
-
-coustomEmitter.on('response',()=>{
-    console.log(`some other logic`)
-})
-coustomEmitter.emit('response','John',34) 
- 
-
-    
+server.listen(8080)
