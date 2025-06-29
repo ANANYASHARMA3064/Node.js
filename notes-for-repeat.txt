@@ -113,4 +113,10 @@ to handle events in an asynchronous, decoupled way. It allows different parts of
 Yes! onClick is actually a specific example of the event emitter pattern
 🧠 .on() — What It Does
 The .on() method is how you listen for a specific event.
+What Does .emit() Mean?
+Emitting an event = triggering it
 
+It’s like screaming into the void, and all the listeners that are .on() that same event?
+They hear it and react.
+
+nnnn
