@@ -118,5 +118,16 @@ Emitting an event = triggering it
 
 It’s like screaming into the void, and all the listeners that are .on() that same event?
 They hear it and react.
+---------------------------------------------------
+Streams
+----------------------------------------------------
+fs.readFileSync()
+Reads the whole file at once
+Blocks the entire event loop until the read is complete
+Not efficient for large files
+Simple to use for small files
 
-nnnn
+fs.createReadStream()
+Reads chunk by chunk (streaming)
+Non-blocking (async and event-driven)
+Ideal for large files
