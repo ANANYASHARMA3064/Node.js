@@ -131,3 +131,16 @@ fs.createReadStream()
 Reads chunk by chunk (streaming)
 Non-blocking (async and event-driven)
 Ideal for large files
+It connects a readable stream (like a file you’re reading) to a writable stream (like a file you’re writing to, or the response of an HTTP request).
+
+It’s like:
+
+“Yo take this data and pass it straight to that thing over there. No middleman. No waiting.”
+🔁 Example:
+const fs = require('fs');
+
+const readableStream = fs.createReadStream('./input.txt');
+const writableStream = fs.createWriteStream('./output.txt');
+
+readableStream.pipe(writableStream);
+🎯 This takes the contents of input.txt and writes it to output.txt directly — efficiently, chunk by chunk, no memory overload.
