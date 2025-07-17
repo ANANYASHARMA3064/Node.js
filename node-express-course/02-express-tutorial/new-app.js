@@ -1,4 +1,7 @@
 const http =require('http')
+const {readFileSync}=require('fs')
+const homepage =readFileSync('./index.html')
+ 
 const server =http.createServer((req,res)=>{
     console.log(req.method)
     console.log(req.url)
@@ -6,7 +9,7 @@ const server =http.createServer((req,res)=>{
     if (url==='/'){
     // console.log('user hit the server')
     res.writeHead(200,{'content-type':'text/html'})
-    res.write('<h1>hello B words!<h1>')
+    res.write(homepage)
     res.end()
     }
     //about page
