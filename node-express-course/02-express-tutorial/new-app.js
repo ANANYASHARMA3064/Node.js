@@ -1,15 +1,9 @@
-const express =require('express');
-const path =require('path'); 
-const app =express();
-// setup static and middlewear 
-app.use(express.static('./public'))
- 
-// app.get('/',(req,res)=>{
-//     res.sendFile((path.resolve(__dirname,'./navbar-app/index.html')))
-// })
-app.all('*',(req,res)=>{
-    res.status(404).send('resource not found')
+const express=require('express')
+const app =express()
+
+app.get('/',(req,res)=>{
+    res.json([{name:'john'},{name:susan}])
 })
 app.listen(8090,()=>{
-    console.log('server is listening on port 800')
+    console.log('the server is listening on port 8090')
 })
