@@ -25,6 +25,22 @@ app.get('/api/products/:productID/reviews/:reviewID',(req,res)=>{
     console.log(req.params)
     res.send('hello world ')
 })
+app.get('/api/v1/query',(req,res)=>{
+    const {search,limit}= req.query
+    let sortedProducts =[...products]
+    if (search){
+    sortedProducts=sortedProducts.filter((products)=>{
+        return products.name.startsWith(search)
+    }) 
+    if (limit){
+    sortedProducts=sortedProducts.slice(0,Number(limit))
+}
+res.status(200).json(sortedProducts)
+
+}
+})
+
+
 app.listen(8090,()=>{
     console.log('the server is listening on port 8090')
 })
