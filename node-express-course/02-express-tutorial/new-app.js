@@ -32,12 +32,16 @@ app.get('/api/v1/query',(req,res)=>{
     sortedProducts=sortedProducts.filter((products)=>{
         return products.name.startsWith(search)
     }) 
-    if (limit){
-    sortedProducts=sortedProducts.slice(0,Number(limit))
-}
-res.status(200).json(sortedProducts)
+   
 
 }
+ if (limit){
+    sortedProducts=sortedProducts.slice(0,Number(limit))
+}
+if (sortedProducts.length < 1){
+    res.status(200).send('no products matched your search ')
+}
+res.status(200).json(sortedProducts)
 })
 
 
