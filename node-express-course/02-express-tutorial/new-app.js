@@ -1,17 +1,18 @@
 const express =require('express')
 const app = express()
-const logger =(req,res,next )=>{
-    const method = req.method
-    const url = req.url
-    const time = new Date().getFullYear()
-    console.log(method,url,time) 
-    next(  )
-}
-app.get('/',logger,(req,res)=>{
+const logger =require('./logger ')
+app.use(logger)
+app.get('/',(req,res)=>{
   res.send('Home')
 })
 app.get('/about',(req,res)=>{
     res.send('about')
+})
+app.get('/api/products',(req,res)=>{
+    res.send('products')
+})
+app.get('/api/items',(req,res)=>{
+    res.send('Items')
 })
 app.listen(8090,()=>{
     console.log('server is listening on port 8090:')
