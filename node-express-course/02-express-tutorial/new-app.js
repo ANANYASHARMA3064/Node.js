@@ -9,4 +9,4 @@ app.get('/api/people',(req,res)=>{
 })
 app.listen(8090,()=>{
     console.log('server is listening on port 8090:')
-})
+}) 
