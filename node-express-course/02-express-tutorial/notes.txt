@@ -46,3 +46,35 @@ extended: false is fine if your form is just “name” and “age” or other f
 If you wanted nested objects or arrays from your form, you’d go extended: true.
 If you want, I can show you side-by-side examples of what extended: false vs extended: true gives you for the same form data — it’s kinda fun to see.
 ------------------------------------------------------------------------------------------------------------------------
+---------------AXIOS----------------------
+In technical terms:
+Axios is a JavaScript library used to make HTTP requests (GET, POST, PUT, DELETE, etc.) from:
+The browser (frontend code)
+Or Node.js (backend code)
+It’s like fetch(), but with extra features and a cleaner API.
+Why people like Axios:
+Simpler syntax than native fetch (less boilerplate).
+Automatically parses JSON responses — no need to call .json() manually.
+Works in older browsers without polyfills.
+Lets you set base URLs, headers, and authentication tokens easily.
+Has built-in error handling and timeout support.
+Can send/receive data as JSON, form data, or even files.
+Example:
+const axios = require('axios');
+
+// GET request
+axios.get('https://api.example.com/users')
+  .then(res => {
+    console.log(res.data); // The actual data
+  })
+  .catch(err => {
+    console.error(err);
+  });
+
+// POST request
+axios.post('https://api.example.com/users', { name: 'Ananya', age: 18 })
+  .then(res => {
+    console.log(res.data);
+  });
+If fetch() is like making your own coffee, Axios is like having a barista hand it to you in a cup with your name already spelled right. ☕
+Do you want me to show fetch vs axios side-by-side so you see why devs get obsessed with it?
