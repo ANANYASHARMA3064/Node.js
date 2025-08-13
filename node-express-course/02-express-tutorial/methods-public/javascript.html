@@ -78,6 +78,45 @@
         }
         input.value = ''
       })
-    </script>
+//       Step-by-step what’s happening:
+// try { ... } catch (error) { ... }
+
+// This is error handling.
+
+// try runs your main code.
+
+// If something fails (like your server returns an error), the catch block runs instead.
+
+// const { data } = await axios.post('/api/people', { name: nameValue })
+
+// Sends a POST request to /api/people.
+
+// The request body is { name: nameValue } — basically the name the user typed.
+
+// await means: "pause here until the server responds."
+
+// The { data } syntax is destructuring — instead of writing response.data, you just pull out data directly.
+
+// const h5 = document.createElement('h5')
+
+// Makes a new <h5> HTML element in memory (not on the page yet).
+
+// h5.textContent = data.person
+
+// Sets the text of the <h5> to whatever person value came back from the server.
+
+// result.appendChild(h5)
+
+// Actually puts that <h5> onto the page inside whatever result is.
+
+// catch (error) { ... }
+
+// If the POST fails (e.g., backend says "bad request"),
+// formAlert.textContent = error.response.data.msg shows the server’s error message.
+
+// input.value = ''
+
+// Clears the input box after submission.
+  </script>
   </body>
 </html>

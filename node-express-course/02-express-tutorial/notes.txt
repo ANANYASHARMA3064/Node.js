@@ -78,3 +78,44 @@ axios.post('https://api.example.com/users', { name: 'Ananya', age: 18 })
   });
 If fetch() is like making your own coffee, Axios is like having a barista hand it to you in a cup with your name already spelled right. ☕
 Do you want me to show fetch vs axios side-by-side so you see why devs get obsessed with it?
+Cool, here’s a POST request — first the clean Axios way, then the fetch way so you can see why people rage-install Axios.
+Axios POST
+
+const axios = require('axios');
+
+axios.post('https://api.example.com/users', {
+  name: 'Ananya',
+  age: 21
+})
+  .then(res => {
+    console.log(res.data);
+  })
+  .catch(err => {
+    console.error(err);
+  });
+✨ That’s it — Axios automatically sets Content-Type: application/json and converts your object to JSON.
+fetch POST
+fetch('https://api.example.com/users', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json' // You gotta set this yourself
+  },
+  body: JSON.stringify({
+    name: 'Ananya',
+    age: 21
+  })
+})
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    return res.json(); // Still have to manually parse
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(err => {
+    console.error(err);
+  });
+With fetch() you basically do the JSON serialization, header setting, and error handling yourself — Axios just does all that for you like an over-helpful butler.
+If you want, I can make a side-by-side cheat sheet for Axios vs fetch so you never forget the syntax.
